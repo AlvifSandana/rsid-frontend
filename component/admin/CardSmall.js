@@ -6,7 +6,6 @@ export default function SmallCard({ title='', caption='', icon, background }) {
         <p>{caption}</p>
       </div>
       <div className="icon"><i className={"ion " + icon} /></div>
-      <a href="#" className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></a>
     </div>
   )
 }

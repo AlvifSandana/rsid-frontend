@@ -12,6 +12,9 @@ import Charts from '../../component/admin/Chart';
 export default function Admin() {
 	const isLoggedIn = useLoginStore((state) => state.isLoggedIn)
 	const router = useRouter()
+	const handleSubmit = () => {
+
+	}
 
 	useEffect(() => {
 		// if(isLoggedIn == 0){
@@ -46,7 +49,27 @@ export default function Admin() {
 							</Card>
 						</div>
 						<div className='col-md-5'>
-							<Card cardTitle={'Input Data Sampah'} cardType={'card-info'}></Card>
+							<Card cardTitle={'Input Data Sampah'} cardType={'card-info'}>
+								<form onSubmit={() => handleSubmit()}>
+									<div className='form-group'>
+										<label>Tipe Sampah</label>
+										<select className='form-control'>
+											<option value={'-'}>pilih...</option>
+											<option value={'organik'}>Organik</option>
+											<option value={'anorganik'}>Anorganik</option>
+										</select>
+									</div>
+									<div className='form-group'>
+										<label>Berat</label>
+										<input type={'number'} className='form-control' name='weight' placeholder='(dalam kg)'/>
+									</div>
+									<div className='form-group'>
+										<label>Tanggal Input</label>
+										<input type={'datetime-local'} className='form-control' name='input_date' />
+									</div>
+									<button type='submit' className='btn btn-info'>Tambah</button>
+								</form>
+							</Card>
 						</div>
 					</div>
 				</section>
