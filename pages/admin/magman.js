@@ -35,6 +35,16 @@ export default function MaggotManagement() {
 						</div>
 					</div>
 					<div className='row mb-2'>
+						<div className='col'>
+							<Card cardTitle={'List Box'} cardType={'bg-success'}>
+							<div className='row'>
+								<div className='col-md-4'>
+									<SmallCard title='Box 1' caption='' background={'bg-warning'} />
+								</div>
+							</div>
+						</Card>
+						</div>
+						
 					</div>
 				</section>
 			</div>
