@@ -70,17 +70,9 @@ const Charts = () => {
   });
 
   return (
-    <div className={styles.chartcontainer}>
-      <div className={styles1.row}>
-        <div className="col">
-          <div className="App">
-            <span>Statistik Penerimaan Sampah Setiap Minggu</span>
-            <canvas id="myChart" ref={canvasEl} height="100" />
-          </div>
-        </div>
-      </div>
+    <div className="App">
+      <canvas id="myChart" ref={canvasEl} height="100" />
     </div>
-
   );
 }
 export default Charts

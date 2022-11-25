@@ -1,27 +1,23 @@
 import React from 'react'
 import Head from 'next/head'
-// import Image from "next/image";
-import styles from "../../styles/admin/Home.module.css";
-import LeftNavbar from '../../component/admin/LeftNavbar';
-import Header from '../../component/admin/Header';
 import PelangganList from '../../component/admin/UserList';
+import Layout from '../../component/admin/Layout';
 // import UploadBenner from '../../component/admin/UploadBenner';
 export default function pesan() {
-  return (
-    <div>
-        <div className={styles.container}>
-			<Head>
-				<title>Rumah Sampah</title>
-				<meta name="description" content="Main10" />
-				<link rel="icon" href="/rs.png" />
-			</Head>
-			<div className={styles.container}>
-				<LeftNavbar />
-				<Header />
-				<PelangganList/>
-				{/* <UploadBenner/> */}
+	return (
+		<Layout title={'Pemesanan'} isActiveNavLink={2}>
+			<div className='content-wrapper'>
+				<section className='content'>
+					<div className="row mb-2">
+						<div className="col-sm-6">
+							<h1 className="ml-2">Pemesanan</h1>
+						</div>
+					</div>
+					<div className='row mb-2'>
+						<PelangganList />
+					</div>
+				</section>
 			</div>
-		</div>
-    </div>
-  )
+		</Layout>
+	)
 }
