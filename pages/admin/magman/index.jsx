@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Layout from '../../../component/admin/Layout';
 import SmallCard from '../../../component/admin/CardSmall';
 import Card from '../../../component/admin/Card';
+import Link from 'next/link';
 
 
 export default function MaggotManagement() {
@@ -11,6 +12,10 @@ export default function MaggotManagement() {
 	const router = useRouter()
 	const handleSubmit = () => {
 
+	}
+
+	const handleClickBox = (path='') => {
+		router.push(`/admin/magman/${path}`)
 	}
 
 	useEffect(() => {
@@ -36,14 +41,20 @@ export default function MaggotManagement() {
 					<div className='row mb-2'>
 						<div className='col'>
 							<Card cardTitle={'List Box'} cardType={'card-success'}>
-							<div className='row'>
-								<div className='col-md-4'>
-									<SmallCard title='Box 1' caption='' background={''} />
+								<div className='row'>
+									<div className='col-md-4' onClick={() => handleClickBox('box1')}>
+										<SmallCard title='Box 1' caption='Maggot Box' background={'bg-warning'} icon='ion-bug' />
+									</div>
+									<div className='col-md-4' onClick={() => handleClickBox('box2')}>
+										<SmallCard title='Box 2' caption='Maggot Box' background={'bg-warning'} icon='ion-bug' />
+									</div>
+									<div className='col-md-4' onClick={() => handleClickBox('box3')}>
+										<SmallCard title='Box 3' caption='Maggot Box' background={'bg-warning'} icon='ion-bug' />
+									</div>
 								</div>
-							</div>
-						</Card>
+							</Card>
 						</div>
-						
+
 					</div>
 				</section>
 			</div>

@@ -66,8 +66,8 @@ const PelangganList = () => {
               </div>
               <div className="card-body">
                 <div className={styles1.tableresposif}>
-                  <table className="table">
-                    <thead className=" text-primary">
+                  <table className="table table-hover">
+                    <thead className="text-center text-primary">
                       <tr>
                         <th>NO</th>
                         <th>Nama</th>
@@ -77,12 +77,13 @@ const PelangganList = () => {
                         <th>Sampah</th>
                         <th>Jumlah Sampah</th>
                         <th>Keterangan</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       {data.map((item, index) => (
                         <tr key={item._id}>
-                          <td>{index + 1}</td>
+                          <td className='text-center'>{index + 1}</td>
                           <td>{item.nama}</td>
                           <td>{item.tlpn}</td>
                           <td>{item.date}</td>
@@ -93,7 +94,7 @@ const PelangganList = () => {
                           <td>
                             {/* <button className="btn btn-primary"><Link href={`/admin/Edit?id=${item._id}&kode=${item.kode}&nama=${item.nama}&merk=${item.merk}&jumlah=${item.jumlah}&foto=${item.foto}&keterangan=${item.keterangan
                                                                     }`}>Edit</Link></button> */}
-                            <button className="btn btn-danger" onClick={() => deletePesan(item._id)}>Delete</button>
+                            <button className="btn btn-danger text-center" onClick={() => deletePesan(item._id)}>Delete</button>
                           </td>
                         </tr>
                       ))}

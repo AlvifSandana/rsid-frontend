@@ -2,6 +2,11 @@ export default function Log() {
   return (
     <div className="content">
       <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-6">
+            <h1 className="ml-2">Activity</h1>
+          </div>
+        </div>
         <div className="card">
           <div className="card-header">
             <h3 className="card-title">Log Panen</h3>
@@ -41,7 +46,6 @@ export default function Log() {
           </div>
           {/* /.card-body */}
         </div>
-
       </div>
     </div>
   )
