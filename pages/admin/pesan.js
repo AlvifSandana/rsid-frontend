@@ -5,7 +5,7 @@ import Layout from '../../component/admin/Layout';
 // import UploadBenner from '../../component/admin/UploadBenner';
 export default function pesan() {
 	return (
-		<Layout title={'Pemesanan'} isActiveNavLink={2}>
+		<Layout title={'Pemesanan'} isActiveNavLink={3}>
 			<div className='content-wrapper'>
 				<section className='content'>
 					<div className="row mb-2">

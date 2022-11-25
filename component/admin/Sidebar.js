@@ -16,7 +16,7 @@ const sidebar = ({ isActive }) => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link href={'/admin/pesan'}>
+            <Link href={'/admin/magman'}>
               <a className={isActive == 2 ? "active nav-link" : "nav-link"}>
                 <i className="nav-icon fas fa-chart-pie" />
                 <p>

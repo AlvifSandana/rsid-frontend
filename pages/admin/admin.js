@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react'
-import Head from 'next/head'
-// import Image from "next/image";
 import useLoginStore from '../../store/store';
 import { useRouter } from 'next/router';
 import Layout from '../../component/admin/Layout';
@@ -33,13 +31,13 @@ export default function Admin() {
 					</div>
 					<div className='row mb-2'>
 						<div className='col-md-4'>
-							<SmallCard title={'100 kg'} caption={'Total'} icon={''} background={'bg-info'} />
+							<SmallCard title={'100 kg'} caption={'Total'} icon={'ion-ios-calculator'} background={'bg-info'} />
 						</div>
 						<div className='col-md-4'>
-							<SmallCard title={'60 kg'} caption={'Organik'} icon={''} background={'bg-success'} />
+							<SmallCard title={'60 kg'} caption={'Organik'} icon={'ion-leaf'} background={'bg-success'} />
 						</div>
 						<div className='col-md-4'>
-							<SmallCard title={'40 kg'} caption={'Anorganik'} icon={''} background={'bg-warning'} />
+							<SmallCard title={'40 kg'} caption={'Anorganik'} icon={'ion-ios-pint'} background={'bg-warning'} />
 						</div>
 					</div>
 					<div className='row mb-2'>
