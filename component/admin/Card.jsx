@@ -1,4 +1,4 @@
-export default function Card({ cardTitle, cardType, children }) {
+export default function Card({ cardTitle='', cardType='', children }) {
   return (
     <div className= {`card ${cardType}`}>
       <div className="card-header">

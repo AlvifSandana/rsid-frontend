@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react'
-import useLoginStore from '../../store/store';
+import useLoginStore from '../../../store/store';
 import { useRouter } from 'next/router';
-import Layout from '../../component/admin/Layout';
-import SmallCard from '../../component/admin/CardSmall';
-import Card from '../../component/admin/Card';
-import Charts from '../../component/admin/Chart';
+import Layout from '../../../component/admin/Layout';
+import SmallCard from '../../../component/admin/CardSmall';
+import Card from '../../../component/admin/Card';
 
 
 export default function MaggotManagement() {
@@ -36,10 +35,10 @@ export default function MaggotManagement() {
 					</div>
 					<div className='row mb-2'>
 						<div className='col'>
-							<Card cardTitle={'List Box'} cardType={'bg-success'}>
+							<Card cardTitle={'List Box'} cardType={'card-success'}>
 							<div className='row'>
 								<div className='col-md-4'>
-									<SmallCard title='Box 1' caption='' background={'bg-warning'} />
+									<SmallCard title='Box 1' caption='' background={''} />
 								</div>
 							</div>
 						</Card>
