@@ -32,7 +32,7 @@ const Form = () => {
       //     });
       axios({
         method: 'post',
-        url: 'http://localhost:5000/api/question',
+        url: `${process.env.HOST_API}/api/question`,
         data: {
           nama: nama,
           tlpn: tlpn,

@@ -10,7 +10,7 @@ const PelangganList = () => {
   const [data, setData] = useState([])
 
   const getAllQuestion = () => {
-    axios.get('http://localhost:5000/api/question')
+    axios.get(`${process.env.HOST_API}/api/question`)
       .then(res => {
         setData(res.data)
         console.log(res.data)
@@ -31,7 +31,7 @@ const PelangganList = () => {
 
   async function deletePesan(_id) {
     try {
-      const res = await axios.delete(`http://localhost:5000/api/question/${_id}`)
+      const res = await axios.delete(`${process.env.HOST_API}/api/question/${_id}`)
       console.log(res)
       if (res.data.message) {
         setMessge(res.data.message)
