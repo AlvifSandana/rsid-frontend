@@ -15,21 +15,6 @@ const Form = () => {
   async function AddForm(e) {
     e.preventDefault()
     try {
-      // axios.post('http://localhost:5000/api/question', {
-      //     nama,
-      //     tlpn,
-      //     date,
-      //     alamat,
-      //     sampah,
-      //     jsampah,
-      //     pesan,
-      // }, )
-      //     .then(res => {
-      //         console.log(res);
-      //     })
-      //     .catch(err => {
-      //       console.log(err);
-      //     });
       axios({
         method: 'post',
         url: `${process.env.HOST_API}/api/question`,
@@ -43,7 +28,7 @@ const Form = () => {
           pesan: pesan,
         },
       }).then((res) => {
-        console.log(res)
+        // console.log(res)
       })
       Swal.fire({
         title: 'Pesanan',
@@ -53,7 +38,7 @@ const Form = () => {
       })
       clearForm()
     } catch (err) {
-      console.log(err)
+      // console.log(err)
     }
   }
   const clearForm = () => {

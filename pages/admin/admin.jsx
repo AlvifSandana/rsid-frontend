@@ -15,9 +15,9 @@ export default function Admin() {
 	}
 
 	useEffect(() => {
-		// if(isLoggedIn == 0){
-		// 	router.push('/admin/login');
-		// }
+		if(isLoggedIn == 0){
+			router.push('/admin/login');
+		}
 	})
 
 	return (
