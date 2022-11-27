@@ -1,8 +1,11 @@
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import Card from "../../../component/admin/Card";
 import Layout from "../../../component/admin/Layout";
+import useLoginStore from "../../../store/store";
 
 export default function Box() {
+  const isLoggedIn = useLoginStore((state) => state.isLoggedIn)
   const router = useRouter()
   const { boxname } = router.query
   const handleSubmit = () => {
@@ -11,6 +14,12 @@ export default function Box() {
   const handlePush = () => {
 
   }
+
+  useEffect(() => {
+    if (isLoggedIn == 0) {
+      router.push('/admin/login');
+    }
+  })
   return (
     <Layout title={boxname} isActiveNavLink={2}>
       <div className='content-wrapper'>
@@ -28,13 +37,13 @@ export default function Box() {
                     <div className="col-md-6">
                       <div className="fomr-group">
                         <label htmlFor="initial_date">Tanggal Masuk</label>
-                        <input type="datetime" name="initial_date" className="form-control" required/>
+                        <input type="datetime" name="initial_date" className="form-control" required />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="fomr-group">
                         <label htmlFor="initial_date">Jumlah Awal</label>
-                        <input type="number" name="initial_weight" className="form-control" placeholder="(dalam kg)" required/>
+                        <input type="number" name="initial_weight" className="form-control" placeholder="(dalam kg)" required />
                       </div>
                     </div>
                   </div>
@@ -42,13 +51,13 @@ export default function Box() {
                     <div className="col-md-6">
                       <div className="fomr-group">
                         <label htmlFor="initial_date">Tanggal Panen</label>
-                        <input type="datetime" name="harvest_date" className="form-control" required/>
+                        <input type="datetime" name="harvest_date" className="form-control" required />
                       </div>
                     </div>
                     <div className="col-md-6">
                       <div className="fomr-group">
                         <label htmlFor="initial_date">Jumlah Panen</label>
-                        <input type="number" name="harvest_weight" className="form-control" placeholder="(dalam kg)" required/>
+                        <input type="number" name="harvest_weight" className="form-control" placeholder="(dalam kg)" required />
                       </div>
                     </div>
                   </div>
