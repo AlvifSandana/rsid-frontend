@@ -19,7 +19,7 @@ function Login() {
             username: username,
             password: password
         }
-        axios.post('http://localhost:5000/api/auth/login', loginData)
+        axios.post(`${process.env.HOST_API}/api/auth/login`, loginData)
             .then((res) => {
                 if (res.status == 400) {
                     Swal.fire({
