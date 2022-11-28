@@ -3,14 +3,14 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import useLoginStore from "../../../store/store";
-// import { Link,useNavigate } from "react-router-dom";
 import LoginStyles from "../../admin/login/Login.module.css"
-// import cx from 'classnames';
 
 function Login() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const setLogin = useLoginStore((state) => state.setLogin)
+    const setUser = useLoginStore((state) => state.setUser)
+    const setAccessToken = useLoginStore((state) => state.setAccessToken)
     const router = useRouter()
 
     const handleLogin = (e) => {
@@ -25,10 +25,12 @@ function Login() {
                     Swal.fire({
                         title: 'Error',
                         text: 'Invalid Credential!',
-                        icon: 'error'
+                        icon: 'error',
                     })
                 } else {
                     setLogin();
+                    setUser(res.data.username);
+                    setAccessToken(res.data.accesstoken);
                     router.push('/admin/admin');
                 }
             })

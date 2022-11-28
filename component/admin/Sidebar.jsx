@@ -1,5 +1,14 @@
 import Link from "next/link";
-const sidebar = ({ isActive }) => {
+import { useRouter } from "next/router";
+import useLoginStore from "../../store/store"
+
+const Sidebar = ({ isActive }) => {
+  const setLogout = useLoginStore((state) => state.setLogout)
+  const router = useRouter()
+  const handleLogout = () => {
+    setLogout()
+    router.push('/admin/login')
+  }
   return (
     <>
       {/* Sidebar Menu */}
@@ -45,8 +54,8 @@ const sidebar = ({ isActive }) => {
               </a>
             </Link>
           </li>
-          <li className="nav-item">
-            <Link href={'/logout'}>
+          <li className="nav-item" onClick={handleLogout}>
+            <Link href={'/#logout'}>
               <a className={isActive == 5 ? "active nav-link text-danger" : "nav-link text-danger"}>
                 <i className="nav-icon fas fa-sign-out-alt" />
                 <p>
@@ -61,4 +70,4 @@ const sidebar = ({ isActive }) => {
     </>
   );
 };
-export default sidebar;
+export default Sidebar;

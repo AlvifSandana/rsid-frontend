@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
-import styles from "../../styles/admin/Home.module.css";
-import styles1 from "../../styles/admin/User.module.css";
 
 const Charts = () => {
   const canvasEl = useRef(null);
