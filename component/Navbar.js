@@ -9,7 +9,7 @@ const Navbar = () => {
           <div className="container d-flex align-items-center">
             <h1 className="logo me-auto">
               <a href="#">
-                <img src='/rsid_logo.png' width={80} height={90} style={{marginTop: -10, marginRight: 10}}/>
+                <img src='/rsid_logo.png' width={70} height={80} style={{marginTop: -10, marginRight: 10}}/>
                 Rumah Sampah
               </a>
             </h1>
