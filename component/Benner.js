@@ -8,8 +8,9 @@ const Benner=()=> {
       
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
-          {/* <h1><b className='text-success'>Rumah</b>Sampah </h1>
-          <h2>Solusi cerdas pengolahan sampah</h2> */}
+          <h1 className='text-dark'><b className='text-success'>Rumah</b> Sampah </h1>
+          <h2>Solusi cerdas pengolahan sampah</h2>
+          <h2>One Click, <span className='text-success'>One Clean</span></h2>
           <a href="#about" className="btn-get-started scrollto mt-25">
             Selengkapnya
           </a>
