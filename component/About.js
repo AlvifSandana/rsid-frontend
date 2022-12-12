@@ -3,7 +3,7 @@ import React from 'react'
 const About =()=>{
     return(
         <div>
-            {/* ======= About Section ======= */}
+            {/* ====== About Section ====== */}
             <section id="about" className="about">
                 <div className="container-fluid">
                     <div className="row">
