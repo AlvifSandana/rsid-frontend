@@ -12,7 +12,7 @@ const Service = () => {
                 <h2>Program</h2>
                 <p>
                   Rumah Sampah mempunyai beberapa program yang menguntungkan
-                  bagi masyarakat
+                  bagi Masyarakat
                 </p>
               </div>
               <div className="row">
